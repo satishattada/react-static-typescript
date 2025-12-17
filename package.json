@@ -1,6 +1,6 @@
 {
   "name": "react-static-pro-plugin-typescript",
-  "version": "2.0.14",
+  "version": "2.0.15",
   "description": "A react static pro plugin that adds support for typescript",
   "main": "node.api.js",
   "repository": "https://github.com/satishattada/react-static-pro.git",
