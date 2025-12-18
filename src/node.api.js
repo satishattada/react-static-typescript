@@ -2,6 +2,7 @@ import { readFileSync } from 'fs'
 import path from 'path'
 import convertPathsToAliases from 'convert-tsconfig-paths-to-webpack-aliases'
 import { parseConfigFileTextToJson, findConfigFile, sys } from 'typescript'
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
 
 export default options => ({
   afterGetConfig: getReactStaticConfigExtender(),
@@ -111,7 +112,6 @@ function getTypeScriptLoader(jsLoader) {
 }
 
 function getTypecheckPlugin(tsconfigPath) {
-  const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
   return new ForkTsCheckerWebpackPlugin({
     async: false,
     typescript: {
